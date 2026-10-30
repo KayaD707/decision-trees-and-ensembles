@@ -1,0 +1,11 @@
+Decision Trees & Ensembles -- Breast Cancer Wisconsin results
+
+Correctness check: from-scratch 94.74% vs. sklearn 93.86% (gap: 0.88pp)
+
+Model comparison:
+  Single tree (from scratch): accuracy=94.74%, F1=0.9583
+  Single tree (sklearn, reference): accuracy=93.86%, F1=0.9510
+  Random Forest: accuracy=95.61%, F1=0.9655
+  Gradient Boosting: accuracy=95.61%, F1=0.9660
+
+Top-5 feature SET overlap (from-scratch vs. sklearn tree): 5/5

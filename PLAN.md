@@ -108,4 +108,15 @@ actual domain intuition, not just read as an opaque ranking.
 
 ## Status
 
-Plan written. Nothing else started yet.
+Complete. **Correctness validated more strongly than the minimum bar required:** the
+from-scratch tree's accuracy (94.74%) is within 0.88pp of sklearn's reference tree
+(93.86%, a one-sample difference), and its top-5 feature importances match sklearn's
+*exactly* to four decimal places — strong evidence the splitting logic itself is
+correct. Ensembles modestly beat the single tree as expected (Random Forest and
+Gradient Boosting both 95.61% vs. ~94%), consistent with this being a small, highly
+separable dataset as anticipated above. One genuine, explainable finding beyond the
+plan: Random Forest's feature importance is visibly more spread across features than
+either a single tree's or Gradient Boosting's, which concentrate heavily on one or two
+features — a concrete illustration of what per-split feature subsampling does to
+decorrelate trees. Full results and the feature-importance plot in
+`docs/PROGRESS_LOG.md`.

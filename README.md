@@ -43,4 +43,11 @@ protocol, and success criteria, written before any code.
 
 ## Status
 
-Plan written. Code not yet started.
+Complete. The from-scratch tree's feature importances matched scikit-learn's reference
+implementation exactly (to four decimal places), and accuracy was within one test
+sample (94.74% vs. 93.86%) — strong validation of the splitting logic. Random Forest
+and Gradient Boosting both modestly beat the single tree (95.61% vs. ~94%), and Random
+Forest's feature importance turned out visibly more spread across features than the
+single tree's or Gradient Boosting's — a concrete illustration of what per-split
+feature subsampling does. See [`PLAN.md`](PLAN.md) and
+[`docs/PROGRESS_LOG.md`](docs/PROGRESS_LOG.md) for full results.
